@@ -22453,3 +22453,9 @@ has-background-danger.is-hoverable:active {
   width: auto;
     max-height: 40px;
 }
+#colornav{
+  color: black;
+}
+#fondo{
+  background-color: lightgrey;
+}
