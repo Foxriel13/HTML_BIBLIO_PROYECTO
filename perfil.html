@@ -10,49 +10,62 @@
   <title>Biblioteca4V</title>
 </head>
 
-<body>
-  <div id="navbarMenuHeroC" class="navbar-menu">
-    <div class="navbar-end">
-      <a class="navbar-item" href="perfil.html"> PERFIL </a>
-      <a class="navbar-item" href="Catalogo.html"> Catalogo </a>
-      <a class="navbar-item" href="index.html"> Home </a>
-      <span class="navbar-item">
-        <a class="button is-success is-inverted">
-          <span class="icon">
-            <i class="fab fa-github"></i>
-          </span>
-          <span></span>
+<body id="body-cat">
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
         </a>
-      </span>
+        <span class="navbar-burger" data-target="navbarMenuHeroC">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroC" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
+          <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
+          <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
+          <span class="navbar-item">
+            <a class="button is-success is-inverted" href="login.html">
+              <span class="icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <span>Login</span>
+            </a>
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="column is-one-quarter is-primary">
+  </header>
+  <div class="column is-full is-primary">
     <div class="box">
-      <div class="field">
-        <figure class="image is-128x128">
-          <img class="is-rounded" src="" alt="Portada del libro">
-        </figure>
-      </div>
-      <div class="field">
-        <label class="label">Usuario</label>
-        <div class="control">
-          Nombre
+      <div class="level">
+        <div class="field">
+          <figure class="image is-128x128">
+            <img class="is-rounded" src="./Imagenes/FotoDePerfil.png" alt="Portada del libro">
+          </figure>
         </div>
-        <div class="control">
-          Apellidos
+        <div class="field">
+          <label class="label">Usuario</label>
+          <div class="control">
+            Nombre
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Cantidad de libros leídos</label>
-        <div class="control">
-          200
+        <div class="field">
+          <label class="label">Cantidad de libros leídos</label>
+          <div class="control">
+            200
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Cantidad de libros donados</label>
-        <div class="control">
-          33
+        <div class="field mr-6">
+          <label class="label">Cantidad de libros donados</label>
+          <div class="control">
+            33
+          </div>
         </div>
       </div>
     </div>
@@ -63,232 +76,268 @@
         <p class="title">Libros alquilados ahora</p>
       </div>
     </div>
-    <article class="media">
-      <figure class="image is-128x128">
-        <img src="/Imagenes/Don Quijote de la Mancha.jpg" alt="Portada del libro">
-      </figure>
-      <div class="media-content">
-        <div class="content ml-5">
-          <h6>
-            Título
-          </h6>
-          <nav class="level is-mobile">
-            <div class="level-left">
-              <p>
-                Fecha en la que se alquilo
-              </p>
-            </div>
-            <div class="level-item">
-              <p>
-                Fecha en la que se devuelve
-              </p>
-            </div>
-          </nav>
-          <button class="button" onclick="">
-            Más info
-          </button>
+    <div class="box">
+      <article class="media">
+        <figure class="image is-128x128 mb-6">
+          <img src="/Imagenes/Don Quijote de la Mancha.jpg" alt="Portada del libro">
+        </figure>
+        <div class="media-content">
+          <div class="content ml-5">
+            <h6>
+              Título
+            </h6>
+            <nav class="columns">
+              <div class="column">
+                <p>
+                  Autor/a
+                </p>
+              </div>
+              <div class="column">
+                <p>
+                  Nº de páginas
+                </p>
+              </div>
+            </nav>
+            <p>
+              Género
+            </p>
+            <nav class="columns">
+              <div class="column">
+                <p>
+                  Fecha en la que se alquilo
+                </p>
+              </div>
+              <div class="column">
+                <p>
+                  Fecha en la que se devuelve
+                </p>
+              </div>
+            </nav>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
     <div class="hero">
       <div class="hero-body">
         <p class="title">Libros leídos</p>
       </div>
     </div>
-    <div class="columns">
-      <div class="column">
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
+    <div class="box">
+      <div class="columns">
+        <div class="column is-half">
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
                     </p>
-                  </nav>
-                </details>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
+          </article>
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
                     </p>
-                  </nav>
-                </details>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
+          </article>
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
                     </p>
-                  </nav>
-                </details>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
+        <div class="column is-half">
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="media">
+            <figure class="image is-128x128">
+              <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
+            </figure>
+            <div class="media-content">
+              <div class="content ml-5">
+                <h6>
+                  Título
+                </h6>
+                <nav class="columns">
+                  <div class="column">
+                    <p>
+                      Autor/a
+                    </p>
+                  </div>
+                  <div class="column">
+                    <p>
+                      Nº de páginas
+                    </p>
+                  </div>
+                </nav>
+                <p>
+                  Género
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="column">
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
-                    </p>
-                  </nav>
-                </details>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
-                    </p>
-                  </nav>
-                </details>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-          </figure>
-          <div class="media-content">
-            <div class="content ml-5">
-              <h6>
-                Título
-              </h6>
-              <div class="block">
-                <details>
-                  <summary class="text">
-                    Prologo del libro
-                  </summary>
-                  <nav class="level">
-                    <p class="text">
-                      asdfghjklertyuixcvbnmdfghjkldfghujiksdxfcgvhbjkdfcgvbhjnmkxdcfvgbhnjmrzsxdtcfyvgbhnxrdtcfbhn
-                    </p>
-                  </nav>
-                </details>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
+      <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <ul class="pagination-list">
+          <li id="pagina">
+            <a class="pagination-link is-current" onclick="paginacion(1)">1</a>
+          </li>
+          <li id="pagina">
+            <a class="pagination-link" onclick="paginacion(2)">2</a>
+          </li>
+          <li id="pagina">
+            <a class="pagination-link" onclick="paginacion(3)">3</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-      <ul class="pagination-list">
-        <li id="pagina">
-          <a class="pagination-link is-current" onclick="paginacion(1)">1</a>
-        </li>
-        <li id="pagina">
-          <a class="pagination-link" onclick="paginacion(2)">2</a>
-        </li>
-        <li id="pagina">
-          <a class="pagination-link" onclick="paginacion(3)">3</a>
-        </li>
-      </ul>
-    </nav>
     <div class="hero">
       <div class="hero-body">
         <p class="title">Valoraciones</p>
       </div>
     </div>
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-128x128">
-          <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <h6>
-            Titulo del libro valorado
-          </h6>
-          <p>
-            No me ha gustado
+    <div class="box">
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Portada del libro">
           </p>
-          <div class="container">
-            <div class="field">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <h6>
+              Titulo del libro valorado
+            </h6>
+            <p>
+              No me ha gustado
+            </p>
+            <div class="container">
+              <div class="field">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-regular fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </body>
 

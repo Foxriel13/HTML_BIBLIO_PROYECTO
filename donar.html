@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bulma/css/bulma.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
+              <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
+              <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
+              <span class="navbar-item">
+                <a class="button is-success is-inverted" href="login.html">
+                  <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                  <span>Login</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+        <div class="box mr-6 ml-6">
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Título</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                        <input class="input" type="text" placeholder="Don Quijote de la Mancha">
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-book"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Autor/a</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                        <input class="input" type="text" placeholder="Miguel de Cervantes">
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Número</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                        <input class="input" type="number" placeholder="Ingresa un número" required>
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-book"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+            </div>
+          </div>
+  
+          <!-- Campo para seleccionar una opción -->
+          <div class="field">
+            <label class="label">Elige una opción</label>
+            <div class="control">
+              <div class="select">
+                <select required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="opcion1">Opción 1</option>
+                  <option value="opcion2">Opción 2</option>
+                  <option value="opcion3">Opción 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Department</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select>
+                                <option>Business development</option>
+                                <option>Marketing</option>
+                                <option>Sales</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label">
+                <label class="label">Already a member?</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="member">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Subject</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                    </div>
+                    <p class="help is-danger">
+                        This field is required
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">Question</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label">
+                <!-- Left empty for spacing -->
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary">
+                            Send message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

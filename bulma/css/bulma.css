@@ -22493,7 +22493,9 @@ has-background-danger.is-hoverable:active {
   margin-top: 40px;
 }
 
-
+figure{
+  flex-shrink: 0;
+}
 #body-cat{
   /*
     background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.es%2FEstanter%25C3%25ADa-Biblioteca-fotograf%25C3%25ADa-graduaci%25C3%25B3n-Videoconferencia%2Fdp%2FB0C2YMFX77&psig=AOvVaw0vp1KN3C8hAgLKsrzmxV4O&ust=1715858447503000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDayPvEj4YDFQAAAAAdAAAAABAE');
