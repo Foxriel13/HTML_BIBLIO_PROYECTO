@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bulma/css/bulma.css">
-    <script  src="./index.js"></script>
+    <script src="index.js"></script>
     <title>Login</title>
 </head>
 <body>
   <div id="fondo">
   <div id="navbarMenuHeroC" class="navbar-menu">
-    <div class="navbar-end">
+    <div class="navbar-end">  
       <a class="navbar-item" href="perfil.html"> PERFIL </a>
       <a class="navbar-item" href="Catalogo.html"> Catalogo </a>
       <a class="navbar-item"> Documentation </a>
@@ -24,29 +24,35 @@
       </span>
     </div>
   </div>
-  <section class="section">
+  <section class="section is-medium">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-half">
-          <div class="box">
+          <div class="box ">
             <h1 class="title has-text-centered">INICIO SESION</h1>
             <form>
               <div class="field">
                 <label class="label">Correo electrónico</label>
                 <div class="control">
-                  <input class="input" type="email" placeholder="Ingrese su correo electrónico">
+                  <input id="correo" class="input" type="email" placeholder="Ingrese su correo electrónico">
                 </div>
+                <div id="errorCorreo"></div>
+                <script src="index.js"></script>
               </div>
+              
               <div class="field">
                 <label class="label">Contraseña</label>
                 <div class="control">
-                  <input class="input" type="password" placeholder="Ingrese su contraseña">
+                  <input id="contraseña" class="input" type="password" placeholder="Ingrese su contraseña">
                 </div>
+                <div id="errorContraseña"></div>
+                <script src="index.js"></script>
               </div>
               <div class="field is-grouped is-grouped-centered">
                 <div class="control">
-                  <button class="button is-primary">Iniciar Sesión</button>
+                  <button class="button is-primary" onclick="comprobarLogin()">Iniciar Sesión</button>
                 </div>
+                
               </div>
             </form>
           </div>

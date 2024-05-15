@@ -3,75 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./bulma/css/bulma.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-B4dIYHKNBt9zBdsK6SbYCU5PvY3o3zFmzg6F7rlz5v7V8nEL8q3wIVCf+DlTNQ+I" crossorigin="anonymous">
-    <script  src="./index.js"></script>
-    <title>Biblioteca4V</title>
-
+    <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>    <script  src="./index.js"></script>
+    <title>Carrusel</title>
+    
 </head>
 <body>
     <header>
-      <section class="hero is-success is-fullheight indexPortada">
-          <div class="hero-head">
-            <header class="navbar">
-              <div class="container">
-                <div class="navbar-brand">
-                  <a class="navbar-item">
-                    <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
-                  </a>
-                  <span class="navbar-burger" data-target="navbarMenuHeroC">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                </div>
-                <div id="navbarMenuHeroC" class="navbar-menu">
-                  <div class="navbar-end">
-                    <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
-                    <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
-                    <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
-                    <span class="navbar-item">
-                      <a class="button is-success is-inverted" href="login.html">
-                        <span class="icon">
-                          <i class="fab fa-github"></i>
-                        </span>
-                        <span>Login</span>
-                      </a>
+        <section class="hero is-success is-fullheight indexPortada">
+            <div class="hero-head">
+              <header class="navbar">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item">
+                      <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
+                    </a>
+                    <span class="navbar-burger" data-target="navbarMenuHeroC">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
                     </span>
                   </div>
-                </div>
-              </div>
-            </header>
-          </div>
-          <div style="text-align: center;"> 
-            <div class="columns is-centered">
-                <div class="column is-half">
-                    <div class="field has-addons">
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Nombre del Libro">
-                        </div>
-                        <div class="control">
-                            <a class="button is-info">Buscar</a>
-                        </div>
+                  <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-end">
+                      <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
+                      <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
+                      <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
+                      <span class="navbar-item">
+                        <a class="button is-success is-inverted" href="login.html">
+                          <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                          </span>
+                          <span>Login</span>
+                        </a>
+                      </span>
                     </div>
+                  </div>
                 </div>
+              </header>
+            </div>
+            <div style="text-align: center;"> 
+              <div class="columns is-centered">
+                  <div class="column is-half">
+                      <div class="field has-addons">
+                          <div class="control is-expanded">
+                              <input class="input" type="text" placeholder="Nombre del Libro">
+                          </div>
+                          <div class="control">
+                              <a class="button is-info">Buscar</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="hero-foot">
+            </div>
+          </section>
+      </header>
+      <body>
+        <div class="box" id="cajaEspacio">
+          <div class="columns">
+            <div class="column">
+              120
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="column">
+              40
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="column">
+             330
+             
+            </div>
+            <div class="column">
+              4.5
+              <i class="fa-solid fa-star"></i>
             </div>
           </div>
-          <div class="hero-foot">
+          <div class="columns">
+            <div class="column">
+              Personas online
+            </div>
+            <div class="column">
+              Libros Disponibles
+            </div>
+            <div class="column">
+              Me gustas
+            </div>
+            <div class="column">
+              Valoraciones
+            </div>
           </div>
-        </section>
-    </header>
-    <main>
-        <h2>Contenido principal</h2>
-        <p>Este es un párrafo de ejemplo.</p>
-        <p>Otro párrafo de ejemplo.</p>
-    </main>
-
-    <footer>
-        <p>Pie de página - © 2024</p>
-        <button href="#perfil">AAAaAA</button>
-        <button href="login.html">MESSI</button> 
-    </footer>
+        </div>
+    <div class="containerCarrusel">
+        <div class="carousel">
+            <div class="tarjeta a">
+                <img src="Imagenes/Don Quijote de la Mancha.jpg">
+            </div>        
+            <div class="tarjeta b">
+                <img src="Imagenes/gibby-icarly.gif">
+            </div> 
+            <div class="tarjeta c">
+              <a href="login.html">
+                <img src="Imagenes/inicioBiblio.jpg">
+              </a>
+            </div> 
+            <div class="tarjeta d">
+                <img src="">
+            </div> 
+            <div class="tarjeta e">
+                <img src="Imagenes/logo4V15mm.png">
+            </div>      
+        </div>
+        <button class="prev" id="prev"><</button>
+        <button class="next" id="next">></button>
+    </div>
+    <script src="carrousel.js"></script>
 </body>
-</html>
+
+</html> 
+

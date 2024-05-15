@@ -13,6 +13,7 @@
   --bulma-control-focus-shadow-l: 50%;
 }
 
+
 /* Bulma Themes */
 :root {
   --bulma-scheme-h: 221;
@@ -4290,7 +4291,7 @@ div.icon-text {
   width: 100%;
 }
 .image.is-4by3 {
-  aspect-ratio: 4/3;
+  aspect-ratio: 8/10;
 }
 .image.is-4by3 img,
 .image.is-4by3 .has-ratio {
@@ -6541,6 +6542,14 @@ button.tag:active,
   color: var(--bulma-card-color);
   max-width: 100%;
   position: relative;
+}
+
+.card {
+  cursor: default;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
 }
 
 .card-footer:first-child, .card-content:first-child, .card-header:first-child {
@@ -22454,8 +22463,344 @@ has-background-danger.is-hoverable:active {
     max-height: 40px;
 }
 #colornav{
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgba(52, 51, 51, 0.534);
+}
+.filtradoBox{
+  margin-top: 4%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
 #fondo{
   background-color: lightgrey;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.imputNegro{
+  background-color: rgb(81, 81, 81);
+}
+#cajaEspacio{
+  margin-top: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.margin6{
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+
+#body-cat{
+  /*
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.es%2FEstanter%25C3%25ADa-Biblioteca-fotograf%25C3%25ADa-graduaci%25C3%25B3n-Videoconferencia%2Fdp%2FB0C2YMFX77&psig=AOvVaw0vp1KN3C8hAgLKsrzmxV4O&ust=1715858447503000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDayPvEj4YDFQAAAAAdAAAAABAE');
+  */
+  background-color: rgb(77, 66, 66);
+}
+.containerCarrusel {
+  display: grid;
+  grid-gap: 10px;
+  grid-template: 1fr / 5% 1fr 5%;
+  grid-template-areas: "prev carousel next";
+  justify-items: center;
+  align-items: center;
+  margin-top: 25vh;
+}
+.prev {
+  grid-area: prev; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;                
+}
+.next {
+  grid-area: next; 
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;                   
+}
+.carousel {
+  grid-area: carousel;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 5px);
+  height: auto;   
+  position: relative;
+}
+.tarjeta {
+  border: solid 5px goldenrod;
+  width: 100px;   
+  height: 100px;
+  position: absolute;
+}
+.tarjeta img{
+  width: 100px;
+  height: 100px;
+}
+.boton {
+  position: relative;
+  margin-top: 15%;
+  text-align: center;
+}
+button:focus {
+  outline: none;
+}
+.a{ 
+  left: 0; 
+  z-index: 0;
+}
+.b{ 
+  transform: scale(1.5, 1.5);             
+  left: calc(25% - 50px);
+  z-index: 1;
+}
+.c{ 
+  transform: scale(2, 2); 
+  left: calc(50% - 50px);
+  z-index: 2;
+}
+.d{ 
+  transform: scale(1.5, 1.5); 
+  right: calc(25% - 50px);
+  z-index: 1;
+}
+.e{ 
+  right: 0; 
+  z-index: 0;
+}  
+
+@media screen and (max-width: 420px){ 
+  .container {
+      grid-template: 1fr 1fr / 1fr 1fr;
+      grid-template-areas: "carousel carousel"
+                           "prev next";
+  }
+  .next, .prev {
+      margin-top: 70px;
+  }
+}
+
+@keyframes BtoA {
+  from{
+      left: calc(25% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;                
+  }
+  to{
+      left: 0;
+      transform: scale(1, 1); 
+      z-index: 0;                               
+  }
+}
+
+@keyframes AtoB {
+  from{
+      left: 0;
+      transform: scale(1, 1); 
+      z-index: 0;                
+  }
+  to{
+      left: calc(25% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;                              
+  }
+}
+
+@keyframes CtoB {
+  from{
+      left: calc(50% - 50px);
+      transform: scale(2, 2);
+      z-index: 2;                
+  }
+  to{
+      left: calc(25% - 50px);
+      transform: scale(1.5, 1.5); 
+      z-index: 1;                               
+  }
+}
+
+@keyframes BtoC {
+  from{
+      left: calc(25% - 50px);
+      transform: scale(1.5, 1.5); 
+      z-index: 1;                 
+  }
+  to{
+      left: calc(50% - 50px);
+      transform: scale(2, 2);
+      z-index: 2;                                
+  }
+}
+
+@keyframes DtoC {
+  from{
+      left: calc(75% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;
+      
+  }
+  to{
+      left: calc(50% - 50px);
+      transform: scale(2, 2);
+      z-index: 2;            
+  }
+}   
+
+@keyframes CtoD {
+  from{
+      left: calc(50% - 50px);
+      transform: scale(2, 2);
+      z-index: 2; 
+  }
+  to{
+      left: calc(75% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;            
+  }
+}  
+
+@keyframes EtoD {
+  from{
+      right: 0;
+      transform: scale(1, 1);
+      z-index: 0;
+  }
+  to{
+      right: calc(25% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;
+  }
+}   
+
+@keyframes DtoE {
+  from{
+      right: calc(25% - 50px);
+      transform: scale(1.5, 1.5);
+      z-index: 1;
+  }
+  to{
+      right: 0;
+      transform: scale(1, 1);
+      z-index: 0;
+  }
+}   
+
+@keyframes AtoE {
+  from{
+      left: 0;
+      z-index: 0;
+  }
+  to{
+      left: calc(100% - 110px);
+      z-index: 0;      
+  }
+}  
+
+@keyframes EtoA {
+  from{
+      left: calc(100% - 100px);
+      z-index: 0; 
+  }
+  to{
+      left: 0;
+      z-index: 0;    
+  }
+}
+
+body{
+  background: none;
+}
+
+.w100{
+  width: 100%;
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+
+.front, .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.back {
+  transform: rotateY( 180deg);
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+
+  .card {
+    height: 285px;
+  }
+
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .cardBox {
+    width: 94.5%;
+    height: 290px;
+  }
+
 }
