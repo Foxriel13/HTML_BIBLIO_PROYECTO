@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Libro</title>
+  <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <figure class="image is-3by4">
+            <img src="./Imagenes/Don Quijote de la Mancha.jpg" alt="Portada del libro">
+          </figure>
+        </div>
+        <div class="column">
+          <h1 class="title">Título del Libro</h1>
+          <h2 class="subtitle">Autor del Libro</h2>
+          <p><strong>Género:</strong> Género del Libro</p>
+          <p><strong>Año de Publicación:</strong> Año de Publicación</p>
+          <p><strong>ISBN:</strong> Número ISBN</p>
+          <p><strong>Descripción:</strong></p>
+          <p>
+            Esta es una breve descripción del libro. Aquí puedes proporcionar un resumen de la trama, 
+            mencionar los temas principales y cualquier otra información relevante que pueda interesar a los lectores.
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+          <h1 class="title">Formulario de Calificación</h1>
+          <div class="box">
+              <form>
+                <div class="field">
+                  <label class="label">Calificación</label>
+                  <div class="control">
+                      <div class="star-rating">
+                        <i onclick="estrellas(1)" class="fa-regular fa-star 1"></i>
+                        <i onclick="estrellas(2)" class="fa-regular fa-star 2"></i>
+                        <i onclick="estrellas(3)" class="fa-regular fa-star 3"></i>
+                        <i onclick="estrellas(4)" class="fa-regular fa-star 4"></i>
+                        <i onclick="estrellas(5)" class="fa-regular fa-star 5"></i>
+                      </div>
+                  </div>
+              </div>
+                  <div class="field">
+                      <label class="label">Descripción</label>
+                      <div class="control">
+                          <textarea class="textarea" placeholder="Escribe tu descripción aquí..."></textarea>
+                      </div>
+                  </div>
+                  
+                  <div class="field">
+                      <div class="control">
+                          <button class="button is-primary">Enviar</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </section>
+
+
+  </section>
+</body>
+</html>

@@ -34,26 +34,31 @@
               <div class="field">
                 <label class="label">Correo electrónico</label>
                 <div class="control">
-                  <input id="correo" class="input" type="email" placeholder="Ingrese su correo electrónico">
+                  <input id="usuario" class="input" type="email" placeholder="Ingrese su correo electrónico">
                 </div>
-                <div id="errorCorreo"></div>
-                <script src="index.js"></script>
               </div>
-              
               <div class="field">
                 <label class="label">Contraseña</label>
                 <div class="control">
-                  <input id="contraseña" class="input" type="password" placeholder="Ingrese su contraseña">
+                  <input id="password" class="input" type="password" placeholder="Ingrese su contraseña">
                 </div>
-                <div id="errorContraseña"></div>
-                <script src="index.js"></script>
               </div>
-              <div class="field is-grouped is-grouped-centered">
-                <div class="control">
-                  <button class="button is-primary" onclick="comprobarLogin()">Iniciar Sesión</button>
+              <div class="field mt-6">
+                <div class="field-body">
+                    <div class="field has-text-centered">
+                        <div class="control">
+                          <button class="button is-primary" onclick="comprobarLogin()">
+                            Iniciar Sesión
+                          </button>
+                        </div>
+                    </div>
                 </div>
-                
-              </div>
+                <div class="field">
+                    <div class="control has-text-centered">
+                        <p id="error" class="text"></p>
+                    </div>
+                </div>
+            </div>
             </form>
           </div>
         </div>

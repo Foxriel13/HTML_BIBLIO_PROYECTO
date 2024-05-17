@@ -1,127 +1,297 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./bulma/css/bulma.css">
-    <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>    <script  src="./index.js"></script>
-    <title>Carrusel</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./bulma/css/bulma.css">
+
+  <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+  <title>Carrusel</title>
+
 </head>
+
 <body>
-    <header>
-        <section class="hero is-success is-fullheight indexPortada">
-            <div class="hero-head">
-              <header class="navbar">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <a class="navbar-item">
-                      <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
-                    </a>
-                    <span class="navbar-burger" data-target="navbarMenuHeroC">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
-                  </div>
-                  <div id="navbarMenuHeroC" class="navbar-menu">
-                    <div class="navbar-end">
-                      <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
-                      <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
-                      <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
-                      <span class="navbar-item">
-                        <a class="button is-success is-inverted" href="login.html">
-                          <span class="icon">
-                            <i class="fa-solid fa-lock"></i>
-                          </span>
-                          <span>Login</span>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </header>
+
+  <span class="ir-arriba icon-arrow-up2"></span>
+  <div class="hero is-success is-fullheight indexPortada">
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
+            </a>
+            <span class="navbar-burger" data-target="navbarMenuHeroC">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroC" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item colornav" href="perfil.html"> PERFIL </a>
+              <a class="navbar-item colornav" href="Catalogo.html"> Catalogo </a>
+              <a class="navbar-item colornav" href="login.html"> Documentation </a>
+              <span class="navbar-item">
+                <a class="button is-success is-inverted" href="login.html">
+                  <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                  <span>Login</span>
+                </a>
+              </span>
             </div>
-            <div style="text-align: center;"> 
-              <div class="columns is-centered">
-                  <div class="column is-half">
-                      <div class="field has-addons">
-                          <div class="control is-expanded">
-                              <input class="input" type="text" placeholder="Nombre del Libro">
-                          </div>
-                          <div class="control">
-                              <a class="button is-info">Buscar</a>
-                          </div>
-                      </div>
-                  </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div style="text-align: center;">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input class="input" type="text" placeholder="Nombre del Libro">
+            </div>
+            <div class="control">
+              <a class="button is-info">Buscar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-foot">
+    </div>
+  </div>
+
+
+
+  <div class="box" id="cajaEspacio">
+    <div class="columns">
+      <div class="column">
+        120
+        <i class="fa-solid fa-heart"></i>
+      </div>
+      <div class="column">
+        40
+        <i class="fa-solid fa-book"></i>
+      </div>
+      <div class="column">
+        330
+
+      </div>
+      <div class="column">
+        4.5
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        Personas online
+      </div>
+      <div class="column">
+        Libros Disponibles
+      </div>
+      <div class="column">
+        Me gustas
+      </div>
+      <div class="column">
+        Valoraciones
+      </div>
+    </div>
+  </div>
+  <div class="containerCarrusel">
+    <div class="carousel">
+      <div class="tarjeta a">
+        <img src="Imagenes/Don Quijote de la Mancha.jpg">
+      </div>
+      <div class="tarjeta b">
+        <img src="Imagenes/gibby-icarly.gif">
+      </div>
+      <div class="tarjeta c">
+        <a href="login.html">
+          <img src="Imagenes/inicioBiblio.jpg">
+        </a>
+      </div>
+      <div class="tarjeta d">
+        <img src="">
+      </div>
+      <div class="tarjeta e">
+        <img src="Imagenes/logo4V15mm.png">
+      </div>
+    </div>
+    <button class="prev" id="prev">
+    </button>
+    <button class="next" id="next">></button>
+  </div>
+  <script src="carrousel.js"></script>
+
+
+
+  <div class="container">
+    <div class="columns">
+        <!-- Columna para el Excel (3/4) -->
+        <div class="column is-hal">
+            <iframe src="https://docs.google.com/spreadsheets/d/1bjPijsRczSbJykIfxwcQzUDR-HRUObKw/edit#gid=1921224031" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- Columna para el Google Calendar (1/4) -->
+        <div class="column is-hal">
+            <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_GOOGLE_CALENDAR_SRC&ctz=YOUR_TIMEZONE" style="border: 0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="Imagenes/mine.jpg" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Nombre del libro</p>
+                <p class="subtitle is-6">Descripcón</p>
               </div>
             </div>
-            <div class="hero-foot">
-            </div>
-          </section>
-      </header>
-      <body>
-        <div class="box" id="cajaEspacio">
-          <div class="columns">
-            <div class="column">
-              120
-              <i class="fa-solid fa-heart"></i>
-            </div>
-            <div class="column">
-              40
-              <i class="fa-solid fa-book"></i>
-            </div>
-            <div class="column">
-             330
-             
-            </div>
-            <div class="column">
-              4.5
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-              Personas online
-            </div>
-            <div class="column">
-              Libros Disponibles
-            </div>
-            <div class="column">
-              Me gustas
-            </div>
-            <div class="column">
-              Valoraciones
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
             </div>
           </div>
         </div>
-    <div class="containerCarrusel">
-        <div class="carousel">
-            <div class="tarjeta a">
-                <img src="Imagenes/Don Quijote de la Mancha.jpg">
-            </div>        
-            <div class="tarjeta b">
-                <img src="Imagenes/gibby-icarly.gif">
-            </div> 
-            <div class="tarjeta c">
-              <a href="login.html">
-                <img src="Imagenes/inicioBiblio.jpg">
-              </a>
-            </div> 
-            <div class="tarjeta d">
-                <img src="">
-            </div> 
-            <div class="tarjeta e">
-                <img src="Imagenes/logo4V15mm.png">
-            </div>      
+      </div>
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="Imagenes/Don Quijote de la Mancha.jpg" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Nombre del libro</p>
+                <p class="subtitle is-6">Descripción</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+            </div>
+          </div>
         </div>
-        <button class="prev" id="prev"><</button>
-        <button class="next" id="next">></button>
+      </div>
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="Imagenes/libro de pluton.jpg" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Nombre del libro</p>
+                <p class="subtitle is-6">Descripción</p>
+              </div>
+            </div>
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="carrousel.js"></script>
+  </div>
+
+
+  <div class="container">
+    <div class="columns">
+        <!-- Primera tarjeta -->
+        <div class="column is-half">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        Primera tarjeta
+                    </p>
+                    <p class="content">
+                        Esta es la descripción de la primera tarjeta. Aquí puedes añadir cualquier contenido que desees.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="Catalogo.html" class="card-footer-item button is-primary">Alquila</a>
+                </div>
+            </div>
+        </div>
+        <!-- Segunda tarjeta -->
+        <div class="column is-half">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        Segunda tarjeta
+                    </p>
+                    <p class="content">
+                        Esta es la descripción de la segunda tarjeta. Aquí puedes añadir cualquier contenido que desees.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="donar.html" class="card-footer-item button is-link">Donar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+          <h3 class="title is-4 has-text-centered mb-6">Contacto</h3><!--Contact-->
+          <p><strong>Secretaría:</strong> Tel.: <a href="tel:+34948124129">948 12 41 29</a><!--Secretary-->
+            <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a></p>
+          <p><strong>Información:</strong> Tel: <a href="tel:+34948124129">948 12 41 29</a><!--Information-->
+            <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a></p>
+        </div>
+      <div class="column is-4">
+        <h3 class="title is-4 has-text-centered">Redes Sociales</h3><!--Social Media-->
+        <div class="social-icons is-flex is-justify-content-center">
+          <a href="https://twitter.com/_cuatrovientos?lang=es"><i class="fa-brands fa-twitter iconos ml-4 efecto"></i></a>
+          <a href="https://www.instagram.com/cipcuatrovientos/?hl=es"><i class="fa-brands fa-instagram iconos ml-4 efecto"></i></a>
+          <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES"><i class="fa-brands fa-facebook iconos ml-4 efecto"></i></a>
+          <a href="https://www.youtube.com/@alviento/videos"><i class="fa-brands fa-youtube iconos ml-4 efecto"></i></a>
+        </div>
+      </div>
+      <div class="column is-4">
+          <h3 class="title is-4 has-text-centered">Sobre Nosotros</h3><!--ABOUT US-->
+          <p class="has-text-centered"></p><!--We are the RSC Portal of Cuatrovientos, collaborating with the Agenda 2030 for sustainable development.-->
+          <p class="has-text-centered"></p><!--Connect with us!-->
+        </div>
+    </div>
+    <div class="has-text-centered mt-6">
+      <p>&copy; 2024.Todos los derechos reservados.</p><!--2024 Cuatrovientos RSC Portal. All rights reserved.-->
+  </div>
+  </div>
+</footer>
 </body>
 
-</html> 
-
+</html>

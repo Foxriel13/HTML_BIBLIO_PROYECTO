@@ -10,184 +10,156 @@
     <title>Login</title>
 </head>
 
-<body>
+<body class="colorFondo">
     <header class="navbar">
         <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item">
-              <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
-            </a>
-            <span class="navbar-burger" data-target="navbarMenuHeroC">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navbarMenuHeroC" class="navbar-menu">
-            <div class="navbar-end">
-              <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
-              <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
-              <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
-              <span class="navbar-item">
-                <a class="button is-success is-inverted" href="login.html">
-                  <span class="icon">
-                    <i class="fa-solid fa-lock"></i>
-                  </span>
-                  <span>Login</span>
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="./Imagenes/logo4V15mm.png" alt="Logo" id="imagenLogo">
                 </a>
-              </span>
+                <span class="navbar-burger" data-target="navbarMenuHeroC">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
-          </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
+                    <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
+                    <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
+                    <span class="navbar-item">
+                        <a class="button is-success is-inverted" href="login.html">
+                            <span class="icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <span>Login</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
         </div>
-      </header>
+    </header>
+    <section class="section is-medium">
         <div class="box mr-6 ml-6">
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Título</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                        <input class="input" type="text" placeholder="Don Quijote de la Mancha">
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-book"></i>
-                        </span>
-                    </p>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Título</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                            <input id="Titulo" class="input" type="text" placeholder="Don Quijote de la Mancha">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-book"></i>
+                            </span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Autor/a</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                        <input class="input" type="text" placeholder="Miguel de Cervantes">
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-user"></i>
-                        </span>
-                    </p>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Autor/a</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                            <input id="Autor" class="input" type="text" placeholder="Miguel de Cervantes">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Número</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                        <input class="input" type="number" placeholder="Ingresa un número" required>
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-book"></i>
-                        </span>
-                    </p>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Número</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control is-expanded has-icons-left">
+                            <input id="NumPaginas" class="input" type="number" placeholder="Ingresa un número">
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="field">
-            <div class="control">
-            </div>
-          </div>
-  
-          <!-- Campo para seleccionar una opción -->
-          <div class="field">
-            <label class="label">Elige una opción</label>
-            <div class="control">
-              <div class="select">
-                <select required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="opcion1">Opción 1</option>
-                  <option value="opcion2">Opción 2</option>
-                  <option value="opcion3">Opción 3</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Department</label>
-            </div>
-            <div class="field-body">
-                <div class="field is-narrow">
-                    <div class="control">
-                        <div class="select is-fullwidth">
-                            <select>
-                                <option>Business development</option>
-                                <option>Marketing</option>
-                                <option>Sales</option>
-                            </select>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">Genero</label>
+                </div>
+                <div class="field-body">
+                    <div class="field is-narrow">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option>Poesia</option>
+                                    <option>Aventuras</option>
+                                    <option>Biografía</option>
+                                    <option>Ciencia Ficción</option>
+                                    <option>Comedia</option>
+                                    <option>Crímenes</option>
+                                    <option>Dramática</option>
+                                    <option>Euskera</option>
+                                    <option>Filosofía</option>
+                                    <option>Francés</option>
+                                    <option>Historia</option>
+                                    <option>Ingles</option>
+                                    <option>Novela</option>
+                                    <option>Otros</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label">
-                <label class="label">Already a member?</label>
-            </div>
-            <div class="field-body">
-                <div class="field is-narrow">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            Yes
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="member">
-                            No
-                        </label>
+            <div class="field mt-6">
+                <div class="field-body">
+                    <div class="field has-text-centered">
+                        <div class="control">
+                            <button class="button is-primary" onclick="registroLibro()">
+                                Registrar Libro
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Subject</label>
-            </div>
-            <div class="field-body">
                 <div class="field">
-                    <div class="control">
-                        <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
-                    </div>
-                    <p class="help is-danger">
-                        This field is required
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">Question</label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
+                    <div class="control has-text-centered">
+                        <p id="error" class="text"></p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="field is-horizontal">
-            <div class="field-label">
-                <!-- Left empty for spacing -->
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <button class="button is-primary">
-                            Send message
-                        </button>
-                    </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+              <div class="columns is-centered">
+                <div class="column is-4">
+                    <h3 class="title is-4 has-text-centered mb-6">Contacto</h3><!--Contact-->
+                    <p><strong>Secretaría:</strong> Tel.: <a href="tel:+34948124129">948 12 41 29</a><!--Secretary-->
+                      <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a></p>
+                    <p><strong>Información:</strong> Tel: <a href="tel:+34948124129">948 12 41 29</a><!--Information-->
+                      <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a></p>
+                  </div>
+                <div class="column is-4">
+                  <h3 class="title is-4 has-text-centered">Redes Sociales</h3><!--Social Media-->
+                  <div class="social-icons is-flex is-justify-content-center">
+                    <a href="https://twitter.com/_cuatrovientos?lang=es"><i class="fa-brands fa-twitter iconos ml-4"></i></a>
+                    <a href="https://www.instagram.com/cipcuatrovientos/?hl=es"><i class="fa-brands fa-instagram iconos ml-4"></i></a>
+                    <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES"><i class="fa-brands fa-facebook iconos ml-4"></i></a>
+                    <a href="https://www.youtube.com/@alviento/videos"><i class="fa-brands fa-youtube iconos ml-4"></i></a>
+                  </div>
                 </div>
+                <div class="column is-4">
+                    <h3 class="title is-4 has-text-centered">Sobre Nosotros</h3><!--ABOUT US-->
+                    <p class="has-text-centered"></p><!--We are the RSC Portal of Cuatrovientos, collaborating with the Agenda 2030 for sustainable development.-->
+                    <p class="has-text-centered"></p><!--Connect with us!-->
+                  </div>
+              </div>
+              <div class="has-text-centered mt-6">
+                <p>&copy; 2024.Todos los derechos reservados.</p><!--2024 Cuatrovientos RSC Portal. All rights reserved.-->
             </div>
-        </div>
-    </div>
+            </div>
+          </footer>
 </body>

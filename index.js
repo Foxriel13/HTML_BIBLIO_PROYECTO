@@ -1,35 +1,23 @@
 function comprobarLogin() {
-    event.preventDefault();
-    const emailInput = document.getElementById('correo');
-    const email = emailInput.value.trim();
-    const errorCorreo = document.getElementById('errorMessages');
-
-    
-    errorMessages.innerHTML = '';
-
-    
-    if (typeof email !== 'string' || email.length === 0) {
-        agregarError('El email no puede estar vacío.');
-        return false; 
+    let clave = document.getElementById('password');
+    let usuario = document.getElementById('usuario');
+    let errores = "";
+    if (clave.value == "") {
+        console.log('el campo contraseña es obligatorio')
+        clave.style.borderColor = '#ff0000'
+        errores += "La contraseña no puede quedar vacia\n"
+    } else {
+        titulo.style.borderColor = '#009846'
     }
+    if (usuario.value=="") {
+        usuario.style.borderColor = '#ff0000'
+        errores += "El usuario no puede quedar vacio\n"
+    }else {
+        usuario.style.borderColor = '#009846'
+    }  
+    document.getElementById("error").style.color = '#ff0000';
+    document.getElementById("error").innerText = errores;
 
-    
-    const atIndex = email.indexOf('@');
-    if (atIndex === -1) {
-        agregarError('El email debe contener un "@"');
-        return false; 
-    }
-
-
-    const dotIndex = email.indexOf('.', atIndex);
-    if (dotIndex === -1) {
-        agregarError('El dominio del email debe contener un "."');
-        return false; 
-    }
-    
-
-    agregarMensaje('Inicio de sesión exitoso.');
-    return true; 
 }
 
 function agregarError(mensaje) {
@@ -48,6 +36,65 @@ function paginacion(numeroClicado) {
             boton.classList.add("is-current");
         } else {
             boton.classList.remove("is-current");
+        }
+    });
+}
+function registroLibro() {
+    let titulo = document.getElementById("Titulo");
+    let autor = document.getElementById("Autor");
+    let num = document.getElementById("NumPaginas");
+    let errores = "";
+    if (titulo.value == "") {
+        titulo.style.borderColor = '#ff0000'
+        errores += "El título no puede quedar vacio\n"
+    } else {
+        titulo.style.borderColor = '#009846'
+    }
+    if (autor.value == "") {
+        autor.style.borderColor = '#ff0000'
+        errores += "El autor no puede quedar vacio\n"
+    } else {
+        autor.style.borderColor = '#009846'
+    }
+    if (num.value == "") {
+        num.style.borderColor = '#ff0000'
+        errores += "El número de páginas no puede quedar vacio\n"
+    } else if (num.value <= 0) {
+        num.style.borderColor = '#ff0000'
+        errores += "El número de páginas no puede ser 0 o inferior\n"
+    } else {
+        num.style.borderColor = '#009846'
+    }
+    document.getElementById("error").style.color = '#ff0000';
+    document.getElementById("error").innerText = errores;
+}
+$(document).ready(function () {
+
+    $('.ir-arriba').click(function () {
+        $('body, html').animate({
+            scrollTop: '0px'
+        }, 300);
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.ir-arriba').slideDown(300);
+        } else {
+            $('.ir-arriba').slideUp(300);
+        }
+    });
+
+});
+
+function estrellas(num) {
+    const stars = document.querySelectorAll('.star-rating i');
+    stars.forEach((star, index) => {
+        if (index < num) {
+            star.classList.remove('fa-regular');
+            star.classList.add('fa-solid', 'selected','estrellaamarilla');
+        } else {
+            star.classList.remove('fa-solid', 'selected','estrellaamarilla');
+            star.classList.add('fa-regular');
         }
     });
 }
