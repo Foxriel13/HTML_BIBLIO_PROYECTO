@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,65 +8,140 @@
   <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>
   <script src="index.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./bulma/css/bulma.css">
 </head>
+
 <body>
-  <section class="section">
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="index.html"> Home </a>
+      <a class="navbar-item" href="perfil.html"> PERFIL </a>
+      <a class="navbar-item" href="Catalogo.html"> Catalogo </a>
+      <a class="navbar-item"> Documentation </a>
+      <span class="navbar-item">
+        <a class="button is-success is-inverted">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>Download</span>
+        </a>
+      </span>
+    </div>
+  </div>
+  <div class="section">
     <div class="container">
       <div class="columns">
         <div class="column is-one-third">
           <figure class="image is-3by4">
-            <img src="./Imagenes/Don Quijote de la Mancha.jpg" alt="Portada del libro">
+            <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Portada del libro">
           </figure>
+          <div class="button is-primary is-fullwidth has-text-weight-bold">Reservar</div>
         </div>
         <div class="column">
-          <h1 class="title">Título del Libro</h1>
-          <h2 class="subtitle">Autor del Libro</h2>
-          <p><strong>Género:</strong> Género del Libro</p>
-          <p><strong>Año de Publicación:</strong> Año de Publicación</p>
-          <p><strong>ISBN:</strong> Número ISBN</p>
-          <p><strong>Descripción:</strong></p>
+          <p class="title">Don Quijote de La Mancha</p>
+          <p class="subtitle mt-2">Miguel de Cervantes</p>
+          <div class="has-text-weight-bold">Género:</div>
           <p>
-            Esta es una breve descripción del libro. Aquí puedes proporcionar un resumen de la trama, 
-            mencionar los temas principales y cualquier otra información relevante que pueda interesar a los lectores.
+            Género del Libro
+          </p>
+          <div class="has-text-weight-bold">Año de Publicación:</div>
+          <p>
+            Año de Publicación
+          </p>
+          <div class="has-text-weight-bold">ISBN:</div>
+          <p>
+            Número ISBN
+          </p>
+          <div class="has-text-weight-bold">Resumen:</div>
+          <p>
+            "Don Quijote de la Mancha", escrito por Miguel de Cervantes, narra las aventuras de Alonso Quijano, un
+            hidalgo que enloquece tras leer demasiados libros de caballería. Decidiendo convertirse en caballero
+            andante, adopta el nombre de Don Quijote y, acompañado de su fiel escudero Sancho Panza, se lanza a una
+            serie de desventuras en la búsqueda de justicia y nobleza.
+            Don Quijote confunde la realidad con la fantasía: ataca molinos de viento creyendo que son gigantes, se
+            enfrenta a rebaños de ovejas pensando que son ejércitos y libera a presos con la convicción de que son
+            oprimidos. Sancho, aunque pragmático, se ve arrastrado por las ilusiones de su amo debido a la promesa de
+            una ínsula para gobernar.
+            La novela es una sátira de los libros de caballería y una exploración de temas como la locura, la realidad y
+            la idealización. En la segunda parte, publicada diez años después, los personajes son conscientes de la fama
+            que han ganado, y Don Quijote continúa con sus hazañas, aunque con una mayor dosis de tristeza y reflexión.
+            Finalmente, Don Quijote recobra la cordura, renuncia a sus delirios y muere como Alonso Quijano, cerrando
+            así su ciclo de aventuras y la crítica a la literatura caballeresca.
           </p>
         </div>
       </div>
     </div>
-    <section class="section">
-      <div class="container">
-          <h1 class="title">Formulario de Calificación</h1>
-          <div class="box">
-              <form>
-                <div class="field">
-                  <label class="label">Calificación</label>
-                  <div class="control">
-                      <div class="star-rating">
-                        <i onclick="estrellas(1)" class="fa-regular fa-star 1"></i>
-                        <i onclick="estrellas(2)" class="fa-regular fa-star 2"></i>
-                        <i onclick="estrellas(3)" class="fa-regular fa-star 3"></i>
-                        <i onclick="estrellas(4)" class="fa-regular fa-star 4"></i>
-                        <i onclick="estrellas(5)" class="fa-regular fa-star 5"></i>
-                      </div>
-                  </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Reseña</h1>
+      <div class="box">
+        <form>
+          <div class="field">
+            <label class="label">Calificación</label>
+            <div class="control">
+              <div class="star-rating">
+                <i onclick="estrellas(1)" class="fa-regular fa-star 1"></i>
+                <i onclick="estrellas(2)" class="fa-regular fa-star 2"></i>
+                <i onclick="estrellas(3)" class="fa-regular fa-star 3"></i>
+                <i onclick="estrellas(4)" class="fa-regular fa-star 4"></i>
+                <i onclick="estrellas(5)" class="fa-regular fa-star 5"></i>
               </div>
-                  <div class="field">
-                      <label class="label">Descripción</label>
-                      <div class="control">
-                          <textarea class="textarea" placeholder="Escribe tu descripción aquí..."></textarea>
-                      </div>
-                  </div>
-                  
-                  <div class="field">
-                      <div class="control">
-                          <button class="button is-primary">Enviar</button>
-                      </div>
-                  </div>
-              </form>
+            </div>
           </div>
+          <div class="field">
+            <label class="label">Descripción</label>
+            <div class="control">
+              <textarea id="DescripcionRes" class="textarea" placeholder="Escribe tu descripción aquí..."></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button onclick="enviarResenya()" class="button is-primary">Enviar</button>
+            </div>
+            <p id="error"></p>
+          </div>
+        </form>
       </div>
+    </div>
   </section>
-
-
-  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-centered mb-6">Contacto</h3><!--Contact-->
+          <p><strong>Secretaría:</strong> Tel.: <a href="tel:+34948124129">948 12 41 29</a><!--Secretary-->
+            <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
+          </p>
+          <p><strong>Información:</strong> Tel: <a href="tel:+34948124129">948 12 41 29</a><!--Information-->
+            <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
+          </p>
+        </div>
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-centered">Redes Sociales</h3><!--Social Media-->
+          <div class="social-icons is-flex is-justify-content-center">
+            <a href="https://twitter.com/_cuatrovientos?lang=es"><i
+                class="fa-brands fa-twitter iconos ml-4 efecto"></i></a>
+            <a href="https://www.instagram.com/cipcuatrovientos/?hl=es"><i
+                class="fa-brands fa-instagram iconos ml-4 efecto"></i></a>
+            <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES"><i
+                class="fa-brands fa-facebook iconos ml-4 efecto"></i></a>
+            <a href="https://www.youtube.com/@alviento/videos"><i
+                class="fa-brands fa-youtube iconos ml-4 efecto"></i></a>
+          </div>
+        </div>
+        <div class="column is-4">
+          <h3 class="title is-4 has-text-centered">Sobre Nosotros</h3><!--ABOUT US-->
+          <p class="has-text-centered"></p>
+          <!--We are the RSC Portal of Cuatrovientos, collaborating with the Agenda 2030 for sustainable development.-->
+          <p class="has-text-centered"></p><!--Connect with us!-->
+        </div>
+      </div>
+      <div class="has-text-centered mt-6">
+        <p>&copy; 2024.Todos los derechos reservados.</p><!--2024 Cuatrovientos RSC Portal. All rights reserved.-->
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

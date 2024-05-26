@@ -21,329 +21,582 @@
           <span class="icon">
             <i class="fab fa-github"></i>
           </span>
-          <span>Download</span>
+          <span>LOGIN</span>
         </a>
       </span>
     </div>
   </div>
-  </div>
-  <div class="box filtradoBox"><!-- la caja que engloba el filtrado -->
-    <h1 class="title">
+  <div class="card filtradoBox">
+    <h2 class="title margin6">
       Filtrado de libros:
-    </h1>
-    <div class="columns">
-      <div class="column"> <!-- Nombre -->
-        <h6>
-          Nombre:
-        </h6>
-        <input type="text" class="imputNegro">
-      </div>
-      <div class="column"> <!-- Género -->
-        <h6>
-          Género:
-        </h6>
-        <input type="text" class="imputNegro">
-      </div>
-      <div class="column"> <!-- Nombre -->
-        <label>
-          Más leidos:
-        </label>
-        <input type="radio" name="radio" value="leidos">
-        <label class="margin6">
-          Mejor valorados:
-        </label>
-        <input type="radio" name="radio" value="valorados">
-      </div>
-    </div>
+    </h2>
+    <form>
+      <div class="columns is-mobile">
+        <div class="column is-4 is-offset">
+          <div class="field margin3">
+            <label class="label">Título</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g. Don Quijote">
+            </div>
+          </div>
 
-    <div class="container">
-      <div class="button-container">
-        <button class="button">Filtrar</button>
+          <div class="field margin3">
+            <label class="label">Autor</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g. Iker" id="inputAutor">
+            </div>
+          </div>
+        </div>
+        <div class="column is-3 is-offset-1">
+          <Table class="margin3">
+            <tr>
+              <td>
+                <label>Selecciona los géneros:</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="margin3">
+                <div class="scrollable-container">
+                  <div class="content">
+                    <ul class="list">
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="TERROR">
+                          TERROR
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="POLICIACA">
+                          POLICIACA
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="SEXUAL">
+                          SEXUAL
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="COMEDIA">
+                          COMEDIA
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="COMIC">
+                          COMIC
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="ÁNIME">
+                          ÁNIME
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="GUÍAS">
+                          GUÍAS
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="DOCUMENTACIÓN">DOCUMENTACIÓN
+                        </label>
+                      </li>
+                      <li class="list__item">
+                        <label class="label--checkbox">
+                          <input type="checkbox" class="option-input checkbox" value="HISTORICOS">
+                          HISTORICOS
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+
+            </tr>
+          </Table>
+
+        </div>
+        <div class="column is-6 is-offset-1">
+
+          <div class='p-1'>
+            <Table>
+              <tr>
+                <td>
+                  <label class="pt-4">
+                    <input type="radio" class="option-input radio" name="filtroCual" checked>
+                    Todos los libros
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td class="margin4">
+                  <label>
+                    <input type="radio" class="option-input radio" name="filtroCual">
+                    Solo disponibles
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td class="margin4">
+                  <label>
+                    <input id="radTop8" type="radio" class="option-input radio" name="filtroCual">
+                    Los 8 mas leidos
+                  </label>
+                </td>
+              </tr>
+
+            </Table>
+
+          </div>
+        </div>
+        
+        
       </div>
-    </div>
+      <button class="button is-primary" id="btnFiltrar">Filtrar</button>
+    </form>
   </div>
 
   <div class="card filtradoBox">
     <section class="section">
       <div class="container">
-        <h1 class="title">Libros Filtrados</h1>
+        <h1 class="title" id="blanco">Libros Filtrados</h1>
         <div class="columns is-multiline">
 
           <table class="w100">
             <tr>
-
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              NO disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
 
 
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
+                  </section>
+                </a>
+              </td>
+
+
+
+              <td>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
 
 
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
-                            </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              NO disponible
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
             </tr>
+
             <tr>
-
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              NO disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
 
 
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
 
 
+
               <td>
-                <div class="box">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              disponible
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
 
               <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
+                <a href="detalle.html">
+                  <section class="section">
+                    <div class="carta">
+                      <div class="front">
+                        <div class="card margin6 carta">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Libro 1">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title is-4">Don Quijote:</p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
-              </td>
-
-              <td>
-                <div class="cardBox">
-                  <div class="carta">
-                    <div class="front">
-                      <div class="card margin6 carta">
-                        <div class="card-image">
-                          <figure class="image is-4by3">
-                            <img src="https://via.placeholder.com/150" alt="Libro 1">
-                          </figure>
-                        </div>
-                        <div class="card-content">
-                          <div class="media">
-                            <div class="media-content">
-                              <p class="title is-4">Libros</p>
-                            </div>
+                      <div class="back">
+                        <div class="margin2">
+                          <h2 class="titLibro">
+                            Don Quijote:
+                          </h2>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Autor:</span> Miguel de Cervantes
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Género:</span> novela negra, verde; amorosa, policiaca
+                          </p>
+                          <hr>
+                          <p>
+                            <span class="titLibro">Crítica:</span> 4'5
+                          </p>
+                          <div class="disponible titLibro">
+                            <p>
+                              NO disponible
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="back">
-                      <p>Pepe</p>
-                    </div>
-                  </div>
-                </div>
+                  </section>
+                </a>
               </td>
             </tr>
           </table>
-        </div>
-        
-        <footer>
 
-        </footer>
+          <div id="paginacion">
+            <nav class="pagination is-centered" aria-label="pagination">
+              <a href="#" class="pagination-previous">Anterior</a>
+              <a href="#" class="pagination-next">Siguiente</a>
+              <ul class="pagination-list">
+                <li><a href="#" class="pagination-link" aria-label="Goto page 1">1</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 45">45</a></li>
+                <li>
+                  <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+                </li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 47">47</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a href="#" class="pagination-link" aria-label="Goto page 86">86</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+
+  </footer>
 </body>
 
 </html>

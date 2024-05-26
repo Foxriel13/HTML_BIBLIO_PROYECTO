@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bulma/css/bulma.css">
+    <script src="https://kit.fontawesome.com/cb5728c0cf.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <title>Login</title>
 </head>
@@ -24,7 +25,7 @@
       </span>
     </div>
   </div>
-  <section class="section is-medium">
+  <section class="section is-large mt-6">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-half">
@@ -32,16 +33,20 @@
             <h1 class="title has-text-centered">INICIO SESION</h1>
             <form>
               <div class="field">
-                <label class="label">Correo electrónico</label>
-                <div class="control">
+                <p class="control has-icons-left">
                   <input id="usuario" class="input" type="email" placeholder="Ingrese su correo electrónico">
-                </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </p>
               </div>
               <div class="field">
-                <label class="label">Contraseña</label>
-                <div class="control">
+                <p class="control has-icons-left">
                   <input id="password" class="input" type="password" placeholder="Ingrese su contraseña">
-                </div>
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
               </div>
               <div class="field mt-6">
                 <div class="field-body">

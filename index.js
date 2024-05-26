@@ -91,10 +91,48 @@ function estrellas(num) {
     stars.forEach((star, index) => {
         if (index < num) {
             star.classList.remove('fa-regular');
-            star.classList.add('fa-solid', 'selected','estrellaamarilla');
+            star.classList.add('fa-solid', 'selected');
         } else {
-            star.classList.remove('fa-solid', 'selected','estrellaamarilla');
+            star.classList.remove('fa-solid', 'selected');
             star.classList.add('fa-regular');
         }
     });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnFiltrar = document.getElementById('btnFiltrar');
+    const inputAutor = document.getElementById('inputAutor');
+    alert("suuu")
+    btnFiltrar.addEventListener('click', function() {
+        let autor = inputAutor.value.trim(); 
+
+        
+        if (autor.toLowerCase() === "iker") {
+
+            ajustar_cartas(5);
+        } else {
+            console.log("El autor no es 'Iker'");
+        }
+    });
+});
+
+
+function ajustar_cartas(val) {
+    let carta = "carta" + val
+    alert(carta)
+    let cartaInv = document.getElementById(carta)
+    cartaInv.hidden=true;
+}
+
+function enviarResenya() {
+    let desc = document.getElementById("DescripcionRes");
+    let errores = "";
+    if (desc.value == "") {
+        desc.style.borderColor = '#ff0000'
+        errores += "El título no puede quedar vacio\n"
+    } else {
+        desc.style.borderColor = '#009846'
+    }
+    document.getElementById("error").style.color = '#ff0000';
+    document.getElementById("error").innerText = errores;
 }
