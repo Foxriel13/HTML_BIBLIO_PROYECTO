@@ -1,7 +1,3 @@
-  // cantidad de tarjtas: 
-        // var cant = document.getElementsByClassName('tarjeta').length;
-        // console.log(cant);
-
         function asignarAnimacion(tarjeta, claseActual, claseSiguiente){
             tarjeta.style.animation = claseActual.toUpperCase() + 'to' + claseSiguiente.toUpperCase() + ' 1s linear forwards';
             tarjeta.className = 'tarjeta ' + claseSiguiente.toLowerCase();
@@ -55,3 +51,34 @@
                 }
             })
         })
+
+        function cambiarColor() {
+            var colores = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; 
+            var palabra = document.getElementById('palabra');
+            var letras = palabra.textContent.split('');
+          
+    
+            palabra.innerHTML = '';
+          
+
+            letras.forEach(function(letra) {
+              var span = document.createElement('span'); 
+              span.textContent = letra; 
+              var colorAleatorio = colores[Math.floor(Math.random() * colores.length)]; 
+              span.style.color = colorAleatorio;
+              palabra.appendChild(span); 
+            });
+          }
+          setInterval(cambiarColor, 500);
+
+          let contador = 0;
+const maxContador = 120;
+const intervalo = 10;
+
+const intervalId = setInterval(() => {
+    document.getElementById('contador').innerText = contador;
+    if (contador >= maxContador) {
+        clearInterval(intervalId);
+    }
+    contador++;
+}, intervalo);

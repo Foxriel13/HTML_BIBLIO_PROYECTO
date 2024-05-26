@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body id="colorFondo">
 
   <span class="ir-arriba icon-arrow-up2"></span>
   <div class="hero is-success is-fullheight indexPortada">
@@ -32,9 +32,9 @@
           </div>
           <div id="navbarMenuHeroC" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item colornav" href="perfil.html"> PERFIL </a>
-              <a class="navbar-item colornav" href="Catalogo.html"> Catalogo </a>
-              <a class="navbar-item colornav" href="login.html"> Documentation </a>
+              <a class="navbar-item" id="colornav" href="perfil.html"> PERFIL </a>
+              <a class="navbar-item" id="colornav" href="Catalogo.html"> Catalogo </a>
+              <a class="navbar-item" id="colornav" href="login.html"> Documentation </a>
               <span class="navbar-item">
                 <a class="button is-success is-inverted" href="login.html">
                   <span class="icon">
@@ -67,9 +67,8 @@
   </div>
   <div class="box" id="cajaEspacio">
     <div class="columns">
-      <div class="column">
+      <div class="column" id="contador">
         120
-        <i class="fa-solid fa-heart"></i>
       </div>
       <div class="column">
         40
@@ -77,7 +76,7 @@
       </div>
       <div class="column">
         330
-
+        <i class="fa-solid fa-heart"></i>
       </div>
       <div class="column">
         4.5
@@ -102,41 +101,37 @@
   <div class="containerCarrusel">
     <div class="carousel">
       <div class="tarjeta a">
-        <img src="Imagenes/Don Quijote de la Mancha.jpg">
+        <a href="Catalogo.html">
+        <img src="./Imagenes/librohoyo.avif">
+        </a>
       </div>
       <div class="tarjeta b">
-        <img src="Imagenes/gibby-icarly.gif">
+        <a href="Catalogo.html">
+        <img src="./Imagenes/saw.jpg">
+      </a>
       </div>
       <div class="tarjeta c">
-        <a href="login.html">
-          <img src="Imagenes/inicioBiblio.jpg">
+        <a href="Catalogo.html">
+          <img src="./Imagenes/mine.jpg">
         </a>
       </div>
       <div class="tarjeta d">
-        <img src="">
+        <a href="Catalogo.html">
+        <img src="./Imagenes/librohoyo.avif">
+          </a>
       </div>
       <div class="tarjeta e">
-        <img src="Imagenes/logo4V15mm.png">
+        <a href="Catalogo.html">
+        <img src="./Imagenes/milibro.jpg">
+        </a>
       </div>
     </div>
-    <button class="prev" id="prev">
-    </button>
+    <button class="prev" id="prev"><</button>
     <button class="next" id="next">></button>
   </div>
-  <script src="carrousel.js"></script>
-  <div class="container">
-    <div class="columns">
-        <!-- Columna para el Excel (3/4) -->
-        <div class="column is-hal">
-            <iframe src="https://docs.google.com/spreadsheets/d/1bjPijsRczSbJykIfxwcQzUDR-HRUObKw/edit#gid=1921224031" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <!-- Columna para el Google Calendar (1/4) -->
-        <div class="column is-hal">
-            <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_GOOGLE_CALENDAR_SRC&ctz=YOUR_TIMEZONE" style="border: 0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
-        </div>
-    </div>
-  </div>
-  <div class="container">
+
+  <p class="cardAbajo has-text-centered is-size-1" id="palabra">¡¡¡MEJORES LIBROS!!!</p>
+  <div class="container cardAbajo">
     <div class="columns is-centered">
       <div class="column is-one-third">
         <div class="card">
@@ -162,7 +157,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="Imagenes/Don Quijote de la Mancha.jpg" alt="Placeholder image">
+              <img src="./Imagenes/Don_Quijote_de_la_Mancha.jpg" alt="Placeholder image">
             </figure>
           </div>
           <div class="card-content">
@@ -182,7 +177,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="Imagenes/libro de pluton.jpg" alt="Placeholder image">
+              <img src="./Imagenes/saw.jpg" alt="Placeholder image">
             </figure>
           </div>
           <div class="card-content">
@@ -200,17 +195,28 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <p class="cardAbajo has-text-centered is-size-1">Eventos!</p>
+  <div class="container cardAbajo">
+    <div class="columns">
+        <div class="column is-hal">
+            <iframe src="https://docs.google.com/spreadsheets/d/1bjPijsRczSbJykIfxwcQzUDR-HRUObKw/edit#gid=1921224031" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="column is-hal">
+            <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_GOOGLE_CALENDAR_SRC&ctz=YOUR_TIMEZONE" style="border: 0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+  </div>
+  <div class="container cardAbajo">
     <div class="columns">
         <!-- Primera tarjeta -->
         <div class="column is-half">
             <div class="card">
                 <div class="card-content">
                     <p class="title">
-                        Primera tarjeta
+                        ALQUILAR
                     </p>
                     <p class="content">
-                        Esta es la descripción de la primera tarjeta. Aquí puedes añadir cualquier contenido que desees.
+                       ¿Quieres Alquilar un libro? ¡Haz Click aqui abajo!
                     </p>
                 </div>
                 <div class="card-footer">
@@ -223,10 +229,10 @@
             <div class="card">
                 <div class="card-content">
                     <p class="title">
-                        Segunda tarjeta
+                        DONAR
                     </p>
                     <p class="content">
-                        Esta es la descripción de la segunda tarjeta. Aquí puedes añadir cualquier contenido que desees.
+                      ¿Quieres Donar un libro? ¡Haz Click aqui abajo!
                     </p>
                 </div>
                 <div class="card-footer">
@@ -236,7 +242,7 @@
         </div>
     </div>
 </div>
-
+<script src="carrousel.js"></script>
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">

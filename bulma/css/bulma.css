@@ -22447,7 +22447,7 @@ has-background-danger.is-hoverable:active {
   --bulma-hero-s: var(--bulma-success-s);
   --bulma-hero-background-l: var(--bulma-success-l);
   --bulma-hero-color-l: var(--bulma-success-invert-l);
-  background-image: url("../../Imagenes/inicioBiblio.jpg");
+  background-image: url("../../Imagenes/iniciobiblio.jpeg");
   background-color: black;
   background-size: cover; 
     background-position: center; 
@@ -22546,7 +22546,7 @@ figure{
 }
 .tarjeta img{
   width: 100px;
-  height: 100px;
+  height: 90px;
 }
 .boton {
   position: relative;
@@ -22905,4 +22905,12 @@ body{
 
 #btnFiltrar{
   margin: 2%;
+}
+
+body{
+  background-color: #6a97a2;
+}
+
+.cardAbajo{
+  margin-bottom: 7%;
 }
