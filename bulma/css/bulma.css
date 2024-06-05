@@ -22917,3 +22917,11 @@ body{
 .colorNegro{
 color: black;
 }
+#margintopmovimientoderecha{
+  margin-top: 65%;
+  margin-left: 85%;
+}
+#margintopmovimientoizquierda{
+  margin-top: 65%;
+  margin-right: 85%;
+}
