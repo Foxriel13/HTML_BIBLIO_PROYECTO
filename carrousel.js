@@ -10,7 +10,7 @@ const intervalId = setInterval(() => {
     contador++;
 }, intervalo);
 
-
+let primeraVez = true;
 let imagenes = ["./Imagenes/milibro.jpg", "./Imagenes/mine.jpg", "./Imagenes/Don_Quijote_de_la_Mancha.jpg", "./Imagenes/saw.jpg"];
 let descripcion = ["En un lejano parque de atracciones y en plena misión secreta para defender a su amada luna de un peligroso emperador, la joven Claudia, hija de Metallus, conoce a Knaach, y juntos se embarcan en una odisea de sucesos desafortunados que desatarán una verdadera guerra galáctica.","Hay muchas formas de jugar a Minecraft, y una de las más populares es el modo Supervivencia, en el que tendrás que forjar tu propio camino en el juego, solo con los bloques que encuentres para fabricar cosas, y te enfrentarás a muchos peligros con la certeza de que, con un solo movimiento en falso, podrías perderlo todo. Es muy emocionante, ¡y muy difícil!","Es el personaje principal de la obra, y tiene como características físicas: De aspecto pálido, alto, delgado, nariz puntiaguda, tiene Barba y bigote. Es el protagonista de la novela y constituye un consagrado mito de la literatura universal, y el más universal y profundo de la literatura española.","La película cuenta una narración no lineal que gira en torno al misterio del asesino Jigsaw, que pone a prueba la voluntad de vivir de sus víctimas sometiéndolas a juegos mortales en los que deben infligirse un gran dolor físico para sobrevivir."];
 
@@ -52,6 +52,7 @@ var enlace3 = document.getElementById('enlace3')
         }else{
             enlace3.href = "#"
         }
+        primeraVez = false;
     });
 
     btnderecha.addEventListener('click', function() {
@@ -63,6 +64,10 @@ var desc2 = document.getElementById('descripcion2')
 var desc3 = document.getElementById('descripcion3')
         if(posicion - 2 <= -1){
             posicion = imagenes.length-1;
+        }
+        if (primeraVez == true){
+            posicion = 2
+            primeraVez = false
         }
         card1.src = imagenes[posicion-2];
         card2.src = imagenes[posicion-1];
