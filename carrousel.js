@@ -3,7 +3,7 @@ const maxContador = 120;
 const intervalo = 10;
 
 const intervalId = setInterval(() => {
-    document.getElementById('contador').innerText = contador;
+    document.getElementById('contador').textContent = contador;
     if (contador >= maxContador) {
         clearInterval(intervalId);
     }
